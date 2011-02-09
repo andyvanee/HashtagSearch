@@ -10,7 +10,7 @@ window.onload = function(){
   
   // When the user enters a hashtag, fire the AJAX request
   $('#hashtag').blur(function(ev){
-    var new_url = "http://search.twitter.com/search.json?q=%23" + ev.target.value;
+    var new_url = "http://search.twitter.com/search.json?callback=?&q=%23" + ev.target.value;
     if (new_url != twitterFeed.feed_url) {
       twitterFeed.feed_url = new_url;
       twitterFeed.reload();
@@ -18,7 +18,7 @@ window.onload = function(){
   });
   $('#hashtag').keypress(function(ev) {
     if (ev.which == 13) {
-      var new_url = "http://search.twitter.com/search.json?q=%23" + ev.target.value;
+      var new_url = "http://search.twitter.com/search.json?callback=?&q=%23" + ev.target.value;
       if (new_url != twitterFeed.feed_url) {
         twitterFeed.feed_url = new_url;
         twitterFeed.reload();
@@ -33,14 +33,10 @@ var twitterFeed = {
   feed_data: {},
   reload: function() {
     row.clear();
-    $.ajax({
-      url: this.feed_url,
-      context: document,
-      dataType: "json",
-      success: function(data, textStatus, jqXHR){
-        twitterFeed.feed_data = data;
-        twitterFeed.update_rows();
-      }
+    
+    $.getJSON(this.feed_url + "&jsoncallback=?", function(data){
+      twitterFeed.feed_data = data;
+      twitterFeed.update_rows();
     });
   },
   update_rows: function(){
@@ -50,15 +46,10 @@ var twitterFeed = {
   more: function(){
     if (this.feed_data.next_page) {
       this.feed_url = "http://search.twitter.com/search.json" + this.feed_data.next_page;
-      $.ajax({
-        url: this.feed_url,
-        context: document,
-        dataType: "json",
-        success: function(data, textStatus, jqXHR){
-          twitterFeed.feed_data = data;
-          twitterFeed.update_rows();
-        }
-      });
+    $.getJSON(this.feed_url + "&jsoncallback=?", function(data){
+      twitterFeed.feed_data = data;
+      twitterFeed.update_rows();
+    });
     }
   }
 };
