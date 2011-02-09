@@ -1,0 +1,119 @@
+body {
+  background-color: #DDD;
+}
+.list {
+  font-family: 'Helvetica Neue';
+  font-weight: lighter;
+  margin: 0 auto;
+  width: 480px;
+  height: 680px;
+  border: 2px solid #333;
+  border-radius: 2px;
+  padding: 0px;
+  overflow-y: scroll;
+}
+
+h1 {
+  margin: 0px;padding: 0px;
+}
+
+h1>button.cell {
+  font-family: 'Helvetica Neue';
+  font-size: 1.1em;
+  line-height: 44px;
+  margin: -1px 0;
+  padding: 0px 5px;
+  text-decoration: none;
+  color: #444;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #AAA;
+  background-color: #DDD;
+}
+
+h1>button.cell:active {
+  background-color: #AAA;
+}
+
+h1>button.cell>input {
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+h1>button.cell>a {
+  float: right;
+  font-weight: bold;
+  text-decoration: none;
+  color: #444;
+  font-size: .8em;
+  line-height: 32px;
+  margin: 4px 0;
+  width: 32px;
+  text-align: center;
+  background-color: #EEE;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  font-size: 1.2em;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+}
+
+li>button.cell {
+  font-family: 'Helvetica Neue';
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #444;
+  margin: -1px 0;
+  padding: 12px 5px;
+  width: 100%;
+  text-align: left;
+  background-color: #FFF;
+  border: 1px solid #AAA;
+}
+
+li>button.cell:active {
+  background-color: #AAA;
+}
+
+li>button.cell>a {
+  font-weight: bold;
+  float: right;
+  text-decoration: none;
+  color: #444;
+  font-size: .8em;
+  line-height: 32px;
+  margin: 4px 0;
+  width: 32px;
+  text-align: center;
+  background-color: #EEE;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+li>button.cell.new>a {
+  color: #242;
+  background-color: #AFA;
+}
+li>button.cell.new {
+  color: #262;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 8em;
+  background-color: #AAA;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #DDD;
+}
