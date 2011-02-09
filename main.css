@@ -5,6 +5,7 @@
 */
 
 body {
+  background-color: #111;
   background-image: -webkit-gradient(linear, left top, right top, from(#049), color-stop(0.03, #000), color-stop(0.98, #000), to(#555));
   background-size: 22px 22px;
   color: #FFF;
