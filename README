@@ -1,0 +1,10 @@
+### Hashtag Search
+
+A simple app using the Twitter API and jQuery AJAX calls.
+
+On the Javascript side, there's two global objects. One represents the Twitter feed, the other a row, or tweet, in the display.
+
+When the page loads, the script poaches the placeholder row as a template for putting the tweets in. It also sets up handlers to call the update function.
+
+The row.add function replaces URL's with links, and adds links to the user's profile to the image and their name.
+
