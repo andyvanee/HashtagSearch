@@ -1,16 +1,19 @@
+/*
+  List App
+  main.css
+  2010 - Andrew VanEe
+*/
+
 body {
   background-color: #DDD;
 }
 .list {
-  font-family: 'Helvetica Neue';
+  font-family: 'Cantarell';
   font-weight: lighter;
-  margin: 0 auto;
-  width: 480px;
-  height: 680px;
+  width: 380px;
   border: 2px solid #333;
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 0px;
-  overflow-y: scroll;
 }
 
 h1 {
@@ -18,7 +21,7 @@ h1 {
 }
 
 h1>button.cell {
-  font-family: 'Helvetica Neue';
+  font-family: 'Cantarell';
   font-size: 1.1em;
   line-height: 44px;
   margin: -1px 0;
@@ -35,8 +38,8 @@ h1>button.cell:active {
   background-color: #AAA;
 }
 
-h1>button.cell>input {
-  font-size: 0.8em;
+h1>input {
+  font-size: 0.6em;
   margin-left: 1em;
 }
 h1>button.cell>a {
@@ -66,7 +69,7 @@ li {
 }
 
 li>button.cell {
-  font-family: 'Helvetica Neue';
+  font-family: 'Cantarell';
   font-size: 0.9em;
   text-decoration: none;
   color: #444;
