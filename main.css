@@ -5,118 +5,102 @@
 */
 
 body {
-  background-color: #DDD;
+  background-image: -webkit-gradient(linear, left top, right top, from(#049), color-stop(0.03, #000), color-stop(0.98, #000), to(#555));
+  background-size: 22px 22px;
+  color: #FFF;
 }
-.list {
+
+h2, .list {
+  width: 80%;
+  max-width: 540px;
+  margin: 0 auto;
   font-family: 'Cantarell';
   font-weight: lighter;
-  width: 380px;
-  border: 2px solid #333;
-  border-radius: 10px;
-  padding: 0px;
 }
 
-h1 {
-  margin: 0px;padding: 0px;
+.list {
+  padding: 6px;
 }
 
-h1>button.cell {
-  font-family: 'Cantarell';
-  font-size: 1.1em;
-  line-height: 44px;
-  margin: -1px 0;
-  padding: 0px 5px;
-  text-decoration: none;
-  color: #444;
+.list > *{
+  padding: 3px;
+  background-color: #8CF;
+  color: #222;
+}
+
+h3, #more button {
+  font-size: 28px;
+  margin: 0px;padding: 0px 4px;
+  background-color: inherit;
+  color: inherit;
+}
+h3 {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+#more button {
+  border-radius: 0;
+  border-width: 0;
   width: 100%;
-  text-align: left;
-  border: 1px solid #AAA;
-  background-color: #DDD;
 }
 
-h1>button.cell:active {
-  background-color: #AAA;
-}
-
-h1>input {
+h3>input {
   font-size: 0.6em;
-  margin-left: 1em;
-}
-h1>button.cell>a {
-  float: right;
-  font-weight: bold;
-  text-decoration: none;
-  color: #444;
-  font-size: .8em;
-  line-height: 32px;
-  margin: 4px 0;
-  width: 32px;
-  text-align: center;
-  background-color: #EEE;
-  padding: 5px;
-  border-radius: 2px;
+  margin: 6px;
 }
 
 ul {
   padding: 0;
   margin: 0;
+  min-height: 22px;
 }
+
+img {
+  float: left;
+  max-width: 48px;
+  margin: 8px 4px;
+  border: 4px solid #FFF;
+}
+
+img:hover {
+  border: 4px solid #ADF;
+}
+h4, li>p, li>img{
+  margin: 5px 0; padding: 0;
+}
+
+h4, li>p {
+  margin-left: 68px;
+}
+
 li {
-  font-size: 1.2em;
+  font-size: 1em;
   list-style: none;
-  width: 100%;
   margin: 0;
-}
-
-li>button.cell {
-  font-family: 'Cantarell';
-  font-size: 0.9em;
-  text-decoration: none;
-  color: #444;
-  margin: -1px 0;
-  padding: 12px 5px;
-  width: 100%;
-  text-align: left;
+  margin-bottom: 3px;
+  padding: 4px 4px;
   background-color: #FFF;
-  border: 1px solid #AAA;
+  clear: both;
+  min-height: 84px;
 }
 
-li>button.cell:active {
-  background-color: #AAA;
-}
-
-li>button.cell>a {
-  font-weight: bold;
-  float: right;
+a {
   text-decoration: none;
-  color: #444;
-  font-size: .8em;
-  line-height: 32px;
-  margin: 4px 0;
-  width: 32px;
-  text-align: center;
-  background-color: #EEE;
-  padding: 5px;
-  border-radius: 2px;
+  color: #6ae;
+  font-weight: bold;
+}
+#more {
+  display: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
-li>button.cell.new>a {
-  color: #242;
-  background-color: #AFA;
+#more button:hover{
+  background-color: #ADF;
 }
-li>button.cell.new {
-  color: #262;
+#more button:active{
+  background-color: #888;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-::-webkit-scrollbar-thumb:vertical {
-  height: 8em;
-  background-color: #AAA;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-track-piece {
-  background-color: #DDD;
-}
+
