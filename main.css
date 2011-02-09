@@ -6,7 +6,6 @@
 
 body {
   background-color: #111;
-  background-image: -webkit-gradient(linear, left top, right top, from(#049), color-stop(0.03, #000), color-stop(0.98, #000), to(#555));
   background-size: 22px 22px;
   color: #FFF;
 }
@@ -36,8 +35,11 @@ h3, #more button {
   color: inherit;
 }
 h3 {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-top-left-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+
 }
 
 #more button {
@@ -93,8 +95,10 @@ a {
 }
 #more {
   display: none;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-bottom-left-radius: 3px;
+  -moz-border-bottom-right-radius: 3px;
 }
 
 #more button:hover{
