@@ -45,8 +45,8 @@ var twitterFeed = {
   },
   more: function(){
     if (this.feed_data.next_page) {
-      this.feed_url = "http://search.twitter.com/search.json" + this.feed_data.next_page;
-    $.getJSON(this.feed_url + "&jsoncallback=?", function(data){
+      this.feed_url = "http://search.twitter.com/search.json" + this.feed_data.next_page + "&callback=?";
+    $.getJSON(this.feed_url, function(data){
       twitterFeed.feed_data = data;
       twitterFeed.update_rows();
     });
